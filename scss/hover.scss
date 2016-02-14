@@ -15,9 +15,23 @@
 @import "mixins";
 @import "hacks";
 
+@import "effects/2d-transitions/pulse";
+@if $includeClasses {
+	.#{$nameSpace}-pulse {
+		@include pulse();
+	}
+}
+
 @import "effects/shadow-and-glow-transitions/float-shadow";
 @if $includeClasses {
 	.#{$nameSpace}-float-shadow {
 		@include float-shadow();
+	}
+}
+
+@import "effects/background-transitions/sweep-to-top";
+@if $includeClasses {
+	.#{$nameSpace}-sweep-to-top {
+		@include sweep-to-top();
 	}
 }
